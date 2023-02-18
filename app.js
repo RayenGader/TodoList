@@ -72,8 +72,6 @@ res.redirect("/" + customListName);
     }
 
   });
-
-
 });
 app.post("/",function(req,res){
 const itemName = req.body.jadid;
@@ -111,10 +109,7 @@ app.post("/delete", function(req,res){
 app.get("/work",function(req,res){
   res.render("list",{kindOfDay: "Work List", newitems: workItems});
 });
-let port = process.env.PORT;
-if(port == null || port ==""){
-  port = 3000;
-}
-app.listen(port,function(){
+
+app.listen(3000,function(){
   console.log("serveur is running ");
 });
